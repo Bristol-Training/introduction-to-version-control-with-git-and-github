@@ -1,0 +1,62 @@
+---
+title: "Creating a version controlled directory"
+---
+
+
+
+
+Git is a tool that is used to version control a *directory of files*. To start, we
+must first create a directory that will contain the files that will be version controlled.
+
+You can call the directory anything you want. For this workshop, we will call
+the directory `versioned_dir`. To create this, type into the command window;
+
+```{.bash}
+mkdir versioned_dir
+```
+
+(note that we used an underscore in the directory name, e.g. `versioned_dir`
+instead of `versioned dir`. Don't use spaces in directory names as this makes
+it harder for the command window to intepret the commands you will type)
+
+This will have created a new directory called `versioned_dir`. We now need to change 
+into this directory. Please do that by typing this into the command window;
+
+```{.bash}
+cd versioned_dir
+```
+
+This will have changed into our new, empty directory. To check that this is empty,
+we will list the contents of the directory. Do that by typing;
+
+```{.bash}
+ls
+```
+
+You should see that nothing is printed to the screen.
+
+## Initialising version control
+
+The next step is to tell git that we want to start version controlling the files in this
+directory. We do that by initialise git using the `git init` command. Type this into the 
+command window;
+
+```{.bash}
+git init
+```
+
+You should see something like this printed as output to the screen;
+
+```
+Initialized empty Git repository in /Users/ab01234/versioned_dir/.git/
+```
+
+This has told git to initialise a new [repository](https://dictionary.cambridge.org/dictionary/english/repository) in which versions of files in this directory will be saved. This repository
+is empty, as we have not yet saved any versions.
+
+
+### Git Cheat Sheet
+
+This is the first git command that you need to know. There are only a very small number
+of git commands (just 10) that you need to be proficient in git. To help you learn them, we will
+build up a Git Cheat Sheet through this workshop. You can find it [here](./910-cheat-sheet.qmd).

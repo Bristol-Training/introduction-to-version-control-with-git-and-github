@@ -1,0 +1,107 @@
+---
+title: "Installing Git"
+---
+
+
+Git is open source, free, and is available for easy installation on a range of operating systems,
+including Windows, macOS and Linux.
+
+You will need to have installed the command line version control tool "git". 
+The instructions below tell you how to install it on each of these platforms.
+
+### Windows
+
+Please install git (which can be downloaded for free) by downloading an
+[installer from here](https://git-scm.com/download/win) (this is from
+the [official git website](https://git-scm.com)). 
+
+Once you have downloaded the installer, double click on the downloaded file to 
+execute it. This will start the installation process. Follow the instructions
+of the installer (click "Next" to accept the license etc.). 
+
+Make sure that everything associated with `Git Bash` is enabled, and
+"Use Git from Git Bash only" is selected. This is the safest choice, as it will
+install a `Git Bash` command window, which will have everything set up for 
+running Git. We will use `Git Bash` in this workshop.
+
+To start the program you need to find `Git Bash`. When you start `Git Bash` it will
+open a command window in which you can type commands. 
+
+
+### Linux
+
+Please install Git using your package manager, e.g. following the 
+[instructions here](https://git-scm.com/download/linux).
+
+The exact command you type will depend on your Linux distribution. Typically,
+the command will look like `apt-get install git`, or `yum install git`, 
+or `dnf install git`.
+
+If you prefer to build and install from source, there are tarballs available
+on [kernel.org](https://www.kernel.org/pub/software/scm/git/).
+
+### macOS
+
+On macOS, you have several choices for how you install git.
+
+1. You can use the git that is installed as part of [Xcode](https://developer.apple.com/xcode/)
+(Apple's free development environment that is supplied as a separate download
+for macOS). The best way to install this is via [Xcode on the Mac App Store](https://apps.apple.com/us/app/xcode/id497799835?mt=12). Note that Xcode is a very large download, and installation will take a while.
+
+2. Install git by going to the [official git website](https://git-scm.com/download) and 
+choose macOS. There are instructions here to install via [homebrew](https://brew.sh/)
+(via `brew install git`) or links to download a [binary installer](https://sourceforge.net/projects/git-osx-installer/).
+
+## Starting Git
+
+Once you have installed git, you now need to start a command window. On Windows, you do this by starting `Git Bash`.
+On Linux or macOS you need to open a command window (e.g. also called a "terminal", "bash window", "console").
+
+To check that git is working, please type the following in the command window and press return;
+
+```{.bash}
+git --version
+```
+
+This should run the git command, and will print the version number of git to the screen. For example, 
+on my Mac, I see this printed;
+
+```
+git version 2.24.3 (Apple Git-128)
+```
+
+Don't worry if you see something slightly different. The exact version number and format of this
+output will depend on how you installed git. If you see something like this printed;
+
+```
+command not found: git
+```
+
+then that means that git is not installed, or something is wrong. Please go through the installation 
+instructions again and double-check you have followed all steps.
+
+
+## Choosing a text editor
+
+We will also need to use a text editor. A text editor is a program that lets you create and edit
+simple text files. There are many different text editors available. You are free to choose
+the one you like the best. Commonly-installed text editors include;
+
+* [nano](https://www.nano-editor.org) - this is a good text editor for beginners (and my favorite and
+personal choice). It should be installed by default on Linux, macOS and Git Bash on Windows
+(instructions for [installing it in Git Bash are here](https://coderwall.com/p/ee-law/use-nano-from-git-bash-on-windows-d) if it isn't available). On Linux,
+if nano isn't available, then a similar program called `pico` likely is.
+
+* [vim](https://www.vim.org) - this is a standard text editor that is installed nearly everywhere,
+and is definitely available on all platforms (or, if not, then the less powerful alternative, called
+`vi` is available). This is a more complex text editor to use, and is not recommended for beginners.
+
+* [notepad++](https://notepad-plus-plus.org) - this is a graphic text editor for Windows. This is
+very easy for beginners to use, but is not available for macOS or Linux.
+
+Note that we are using a text editor to make it easier to run the workshop. Git can be used
+to version control all kinds of files produced using all kinds of programs. For example, you
+could version control Word documents, PDFs, Excel spreadsheets and photos.
+In this workshop, we will just work with text files.
+
+

@@ -1,0 +1,51 @@
+---
+title: Introduction
+---
+
+
+
+
+Git is a version control system that allows you to save multiple versions of a file or directory. This is useful to allow you to keep a record of all changes made to a file, and to move backwards and forwards in time through different versions of your file.
+
+[Git](https://en.wikipedia.org/wiki/Git_(software)) is an example of a 
+[version control](https://en.wikipedia.org/wiki/Version_control) system. 
+There are many different version control systems, e.g. [CVS](https://en.wikipedia.org/wiki/Concurrent_Versions_System), 
+[subversion](https://en.wikipedia.org/wiki/Apache_Subversion) and 
+[mercurial](https://en.wikipedia.org/wiki/Mercurial).
+
+However, Git has risen to become almost the standard version control system with extremely high adoption and widespread use across academia, personal projects and industry. The [State of the Octoverse](https://octoverse.github.com) gives a good idea of how widespread git has become. In my opinion, git is the right
+choice for version control for all new projects.
+
+Git was originally developed to manage version control for the source code of the Linux kernel
+(Linux's and Git's creator, Linus Torvalds, jokes that he [named git after himself](https://en.wikipedia.org/wiki/Git#Naming)). Despite starting as a tool
+for programmers, it is now used to version control any kind of file, and is now widely used in academia
+for a whole host of projects, e.g.
+
+* Saving different versions of a paper or thesis
+* Saving different versions of data in a study
+* Saving different versions of analysis scripts
+* Saving different versions of group documents, e.g. websites, agreements, wikis or collaboration documents
+
+Git is free and open source, and there are [many](http://git-scm.com/docs/gittutorial) 
+[Git](http://rogerdudler.github.io/git-guide/) [tutorials](http://www.vogella.com/tutorials/Git/article.html) available.
+
+Git is best learned by using it, so
+please copy out and play with the examples provided, and have a go at the exercises. Throughout this
+workshop you will build up a "cheat sheet" of Git commands. These are summarised
+[here](./pages/910-cheat-sheet.qmd).
+
+
+### Intended learning outcomes
+
+By the end of this course, you will:
+
+- Create a directory that will contain files that can be version controlled
+- Save multiple versions of files
+- Retrieve old versions of files
+- Add, rename and delete version controlled files
+- Back up you version controlled files to a cloud service such as GitHub
+- Write markdown to describe your version controlled files
+
+
+
+
