@@ -128,17 +128,18 @@ empty, and something like this page should be seen.
 This page gives instructions for the three different ways that you can add files
 to this repository. In this case, we will use the "push an existing repository
 from the command line" option. The commands to do this are written on the page,
-so we will copy and paste;
+so we will copy and paste
 
-```
 ```
 git remote add origin https://github.com/ab01234/versioned_dir.git
 git push -u origin main
 ```
 
-(note that we have already renamed `master` to `main`, so don't need to run the
-second command. Also note that you will need to copy and paste your command - it
-will have your GitHub username in the repository URL). 
+Alternatively, we could run 
+
+```
+git clone https://github.com/ab01234/versioned_dir
+```
 
 If this is the first time you have used GitHub, then it is likely that you 
 will be asked to log in when you ran the ``git push`` command. The method

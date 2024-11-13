@@ -11,9 +11,8 @@ The instructions below tell you how to install it on each of these platforms.
 
 ### Windows
 
-Please install git (which can be downloaded for free) by downloading an
-[installer from here](https://git-scm.com/download/win) (this is from
-the [official git website](https://git-scm.com)). 
+You can install git by downloading an
+installer from [https://git-scm.com/download/win](https://git-scm.com/download/win). 
 
 Once you have downloaded the installer, double click on the downloaded file to 
 execute it. This will start the installation process. Follow the instructions
@@ -26,6 +25,27 @@ running Git. We will use `Git Bash` in this workshop.
 
 To start the program you need to find `Git Bash`. When you start `Git Bash` it will
 open a command window in which you can type commands. 
+
+Alternatively, if you are using Anaconda, you can install `git` from the command line:
+
+```{.bash}
+conda install -c anaconda git
+```
+
+
+
+### macOS
+
+On macOS, you have several choices for how you install git.
+
+1. You can use the git that is installed as part of [Xcode](https://developer.apple.com/xcode/)
+(Apple's free development environment that is supplied as a separate download
+for macOS). The best way to install this is via [Xcode on the Mac App Store](https://apps.apple.com/us/app/xcode/id497799835?mt=12). Note that Xcode is a very large download, and installation will take a while.
+
+2. Install git by going to the [official git website](https://git-scm.com/download) and 
+choose macOS. There are instructions here to install via [homebrew](https://brew.sh/)
+(via `brew install git`) or links to download a [binary installer](https://sourceforge.net/projects/git-osx-installer/).
+
 
 
 ### Linux
@@ -40,17 +60,7 @@ or `dnf install git`.
 If you prefer to build and install from source, there are tarballs available
 on [kernel.org](https://www.kernel.org/pub/software/scm/git/).
 
-### macOS
 
-On macOS, you have several choices for how you install git.
-
-1. You can use the git that is installed as part of [Xcode](https://developer.apple.com/xcode/)
-(Apple's free development environment that is supplied as a separate download
-for macOS). The best way to install this is via [Xcode on the Mac App Store](https://apps.apple.com/us/app/xcode/id497799835?mt=12). Note that Xcode is a very large download, and installation will take a while.
-
-2. Install git by going to the [official git website](https://git-scm.com/download) and 
-choose macOS. There are instructions here to install via [homebrew](https://brew.sh/)
-(via `brew install git`) or links to download a [binary installer](https://sourceforge.net/projects/git-osx-installer/).
 
 ## Starting Git
 

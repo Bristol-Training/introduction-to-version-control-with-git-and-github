@@ -33,5 +33,5 @@ title: Git Cheat Sheet
                              git and doesn't have any changes. Use `-f` to force removal of files. 
 (10) **git push**              : Push versions that are saved in the local repository (.git folder)
                              so they are backed up to a remote repository (.git folder)
-
+(11) **git clone *LINK***              : Clone a repository from a remote repository to your local computer.
 
