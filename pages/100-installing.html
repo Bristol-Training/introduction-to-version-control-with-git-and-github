@@ -262,16 +262,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>You will need to have installed the command line version control tool “git”. The instructions below tell you how to install it on each of these platforms.</p>
 <section id="windows" class="level4">
 <h4 class="anchored" data-anchor-id="windows">Windows</h4>
-<p>Please install git (which can be downloaded for free) by downloading an <a href="https://git-scm.com/download/win">installer from here</a> (this is from the <a href="https://git-scm.com">official git website</a>).</p>
+<p>You can install git by downloading an installer from <a href="https://git-scm.com/download/win">https://git-scm.com/download/win</a>.</p>
 <p>Once you have downloaded the installer, double click on the downloaded file to execute it. This will start the installation process. Follow the instructions of the installer (click “Next” to accept the license etc.).</p>
 <p>Make sure that everything associated with <code>Git Bash</code> is enabled, and “Use Git from Git Bash only” is selected. This is the safest choice, as it will install a <code>Git Bash</code> command window, which will have everything set up for running Git. We will use <code>Git Bash</code> in this workshop.</p>
 <p>To start the program you need to find <code>Git Bash</code>. When you start <code>Git Bash</code> it will open a command window in which you can type commands.</p>
-</section>
-<section id="linux" class="level4">
-<h4 class="anchored" data-anchor-id="linux">Linux</h4>
-<p>Please install Git using your package manager, e.g.&nbsp;following the <a href="https://git-scm.com/download/linux">instructions here</a>.</p>
-<p>The exact command you type will depend on your Linux distribution. Typically, the command will look like <code>apt-get install git</code>, or <code>yum install git</code>, or <code>dnf install git</code>.</p>
-<p>If you prefer to build and install from source, there are tarballs available on <a href="https://www.kernel.org/pub/software/scm/git/">kernel.org</a>.</p>
+<p>Alternatively, if you are using Anaconda, you can install <code>git</code> from the command line:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> install <span class="at">-c</span> anaconda git</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="macos" class="level4">
 <h4 class="anchored" data-anchor-id="macos">macOS</h4>
@@ -281,11 +277,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>Install git by going to the <a href="https://git-scm.com/download">official git website</a> and choose macOS. There are instructions here to install via <a href="https://brew.sh/">homebrew</a> (via <code>brew install git</code>) or links to download a <a href="https://sourceforge.net/projects/git-osx-installer/">binary installer</a>.</p></li>
 </ol>
 </section>
+<section id="linux" class="level4">
+<h4 class="anchored" data-anchor-id="linux">Linux</h4>
+<p>Please install Git using your package manager, e.g.&nbsp;following the <a href="https://git-scm.com/download/linux">instructions here</a>.</p>
+<p>The exact command you type will depend on your Linux distribution. Typically, the command will look like <code>apt-get install git</code>, or <code>yum install git</code>, or <code>dnf install git</code>.</p>
+<p>If you prefer to build and install from source, there are tarballs available on <a href="https://www.kernel.org/pub/software/scm/git/">kernel.org</a>.</p>
+</section>
 <section id="starting-git" class="level3">
 <h3 class="anchored" data-anchor-id="starting-git">Starting Git</h3>
 <p>Once you have installed git, you now need to start a command window. On Windows, you do this by starting <code>Git Bash</code>. On Linux or macOS you need to open a command window (e.g.&nbsp;also called a “terminal”, “bash window”, “console”).</p>
 <p>To check that git is working, please type the following in the command window and press return;</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> <span class="at">--version</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> <span class="at">--version</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>This should run the git command, and will print the version number of git to the screen. For example, on my Mac, I see this printed;</p>
 <pre><code>git version 2.24.3 (Apple Git-128)</code></pre>
 <p>Don’t worry if you see something slightly different. The exact version number and format of this output will depend on how you installed git. If you see something like this printed;</p>

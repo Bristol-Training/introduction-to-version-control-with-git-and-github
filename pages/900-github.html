@@ -236,6 +236,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#github" id="toc-github" class="nav-link" data-scroll-target="#github">GitHub</a></li>
   <li><a href="#installing-a-git-credential-helper" id="toc-installing-a-git-credential-helper" class="nav-link" data-scroll-target="#installing-a-git-credential-helper">Installing a Git Credential Helper</a></li>
   <li><a href="#creating-a-github-account" id="toc-creating-a-github-account" class="nav-link" data-scroll-target="#creating-a-github-account">Creating a GitHub account</a></li>
+  <li><a href="#backing-up-new-changes" id="toc-backing-up-new-changes" class="nav-link" data-scroll-target="#backing-up-new-changes">Backing up new changes</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/uob-training/introduction-to-git-and-github/edit/main/pages/900-github.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/introduction-to-git-and-github/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -308,57 +309,36 @@ HEAD           description    index          logs           refs</code></pre>
 <p>I’ve left the repository type to “Public” (meaning everything is published openly), and am not initialising the repository with anything (as we will be uploading our existing <code>versioned_dir</code> in the next step).</p>
 <p>Click “Create Repository” to create the new repository. It will start off being empty, and something like this page should be seen.</p>
 <p><img src="../images/image02.jpg" class="img-fluid"></p>
-<p>This page gives instructions for the three different ways that you can add files to this repository. In this case, we will use the “push an existing repository from the command line” option. The commands to do this are written on the page, so we will copy and paste;</p>
-<pre><code></code></pre>
-<p>git remote add origin https://github.com/ab01234/versioned_dir.git git push -u origin main</p>
-<pre><code>
-(note that we have already renamed `master` to `main`, so don't need to run the
-second command. Also note that you will need to copy and paste your command - it
-will have your GitHub username in the repository URL). 
-
-If this is the first time you have used GitHub, then it is likely that you 
-will be asked to log in when you ran the ``git push`` command. The method
-you use to log in will depend on your account and operating system. In most
-cases, the easiest is to use the option to log in via your web browser.
-This will open a tab in your browser and will ask you to log in there
-with your GitHub username and password (and possibly multi-factor authenticator
-too).
-
-Assuming you could log in correctly, then you should see output that looks
-something like this;
-</code></pre>
-<p>Enumerating objects: 21, done. Counting objects: 100% (21/21), done. Delta compression using up to 8 threads Compressing objects: 100% (16/16), done. Writing objects: 100% (21/21), 2.23 KiB | 2.23 MiB/s, done. Total 21 (delta 5), reused 0 (delta 0) remote: Resolving deltas: 100% (5/5), done. To https://github.com/ab01234/versioned_dir.git * [new branch] main -&gt; main Branch ‘main’ set up to track remote branch ‘main’ from ‘origin’.</p>
-<pre><code>
-This shows that our local versions in our `.git` folder have been pushed up to
-the `.git` folder on GitHub (in my case `https://github.com/ab01234/versioned_dir.git`).
-Git has also been set up so that the local `main` on our computer is set 
-to track the remote `main` on GitHub.
-
-If you refresh the GitHub page you should now see that your files have been
-uploaded, e.g.
-
-![](../images/image03.jpg)
-
-You can use the GitHub interface to explore the files in your repository. For example,
-you can navigate to any version in the repository by clicking the "Commits" (the "9 commits"
-on the right). This will show all of the versions that have been saved, together with the
-log messages. Cool :-)
-
-![](../images/image04.jpg)
-
-## Backing up new changes
-
-You have now backed up the `.git` directory of `versioned_dir` to GitHub. But what
-if we make new changes and save new versions?
-
-Let's change `README.md`, e.g. by changing the last line to read;
-</code></pre>
-<p>will say that the cat goes meow and kittens are cute.</p>
-<pre><code>
-Commit this change to the repository using
-
-```{.bash}
-git commit -a</code></pre>
+<p>This page gives instructions for the three different ways that you can add files to this repository. In this case, we will use the “push an existing repository from the command line” option. The commands to do this are written on the page, so we will copy and paste</p>
+<pre><code>git remote add origin https://github.com/ab01234/versioned_dir.git
+git push -u origin main</code></pre>
+<p>Alternatively, we could run</p>
+<pre><code>git clone https://github.com/ab01234/versioned_dir</code></pre>
+<p>If this is the first time you have used GitHub, then it is likely that you will be asked to log in when you ran the <code>git push</code> command. The method you use to log in will depend on your account and operating system. In most cases, the easiest is to use the option to log in via your web browser. This will open a tab in your browser and will ask you to log in there with your GitHub username and password (and possibly multi-factor authenticator too).</p>
+<p>Assuming you could log in correctly, then you should see output that looks something like this;</p>
+<pre><code>Enumerating objects: 21, done.
+Counting objects: 100% (21/21), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (16/16), done.
+Writing objects: 100% (21/21), 2.23 KiB | 2.23 MiB/s, done.
+Total 21 (delta 5), reused 0 (delta 0)
+remote: Resolving deltas: 100% (5/5), done.
+To https://github.com/ab01234/versioned_dir.git
+ * [new branch]      main -&gt; main
+Branch 'main' set up to track remote branch 'main' from 'origin'.</code></pre>
+<p>This shows that our local versions in our <code>.git</code> folder have been pushed up to the <code>.git</code> folder on GitHub (in my case <code>https://github.com/ab01234/versioned_dir.git</code>). Git has also been set up so that the local <code>main</code> on our computer is set to track the remote <code>main</code> on GitHub.</p>
+<p>If you refresh the GitHub page you should now see that your files have been uploaded, e.g.</p>
+<p><img src="../images/image03.jpg" class="img-fluid"></p>
+<p>You can use the GitHub interface to explore the files in your repository. For example, you can navigate to any version in the repository by clicking the “Commits” (the “9 commits” on the right). This will show all of the versions that have been saved, together with the log messages. Cool :-)</p>
+<p><img src="../images/image04.jpg" class="img-fluid"></p>
+</section>
+<section id="backing-up-new-changes" class="level3">
+<h3 class="anchored" data-anchor-id="backing-up-new-changes">Backing up new changes</h3>
+<p>You have now backed up the <code>.git</code> directory of <code>versioned_dir</code> to GitHub. But what if we make new changes and save new versions?</p>
+<p>Let’s change <code>README.md</code>, e.g.&nbsp;by changing the last line to read;</p>
+<pre><code>will say that the cat goes meow and kittens are cute.</code></pre>
+<p>Commit this change to the repository using</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-a</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Now run <code>git status</code>. You should see output that looks something like this;</p>
 <pre><code>On branch main
 Your branch is ahead of 'origin/main' by 1 commit.
@@ -366,7 +346,7 @@ Your branch is ahead of 'origin/main' by 1 commit.
 
 nothing to commit, working tree clean</code></pre>
 <p>This shows that git knows that your working tree is clean, but that the <code>main</code> in your local repository now has one commit more than the <code>main</code> on GitHub. It is ahead of GitHub by 1 commit. We can send this new commit to GitHub using the command <code>git push</code>. Type this now;</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>You should see output that looks something like this;</p>
 <pre><code>Enumerating objects: 5, done.
 Counting objects: 100% (5/5), done.
